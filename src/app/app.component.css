@@ -1,0 +1,129 @@
+
+/* You can add global styles to this file, and also import other style files */
+html,body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+/* column 1 */
+div[class*="col-md-2 col-lg-2"] {
+    background-color: rgb(66,62,65);
+    color: rgb(255,255,255);
+}
+
+/* column 2 */
+div[class*="col-md-5 col-lg-4"] {
+    background-color: rgb(244,243,239);
+    color: rgb(130,124,116);
+}
+
+/* column 3 */
+div[class*="col-md-5 col-lg-6"] {
+    color: rgb(74,71,64);
+}
+
+
+#sidenav a {
+    color: inherit;
+    text-decoration: inherit;
+    line-height: 40px;
+    letter-spacing: 0.02em; 
+    font-size: calc(14px + 0.25vw);
+}
+
+#sidenav a:hover {
+    color: inherit;
+    text-decoration: underline;
+    line-height: 40px;
+    letter-spacing: 0.02em; 
+    font-size: calc(14px + 0.25vw);
+}
+
+#boldInbox {
+    font-weight: bold;
+}
+
+.my-col {
+    padding: 4px 2px;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+
+div.input-row {
+    overflow-y: hidden;
+}
+
+.svg {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(110deg) brightness(98%) contrast(108%);
+}
+
+span.my-col-text {
+    font-size: calc(10px + 0.25vw);
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: rgb(227,178,60);
+    border-color: rgb(227,178,60);
+    font-size: calc(15px + 0.25vw);
+}
+
+.btn-primary:hover {
+    background-color: rgb(255,127,39);
+    border-color: rgb(255,127,39);
+}
+
+.card {
+    width: 99%;
+    border-style: none;
+    background-color: rgb(244,243,239);
+}
+
+.card:hover {
+    width: 99%;
+    border-style: none;
+    background-color: white;
+    -webkit-box-shadow: 7px 6px 12px -7px rgba(0,0,0,0.28);
+    -moz-box-shadow: 7px 6px 12px -7px rgba(0,0,0,0.28);
+    box-shadow: 7px 6px 12px -7px rgba(0,0,0,0.28);
+}
+
+.card-title {
+    font-weight: bold;
+    color: black;
+}
+
+.card-text {
+    padding-top: 10px;
+    font-size: calc(14px + 0.25vw);
+}
+
+#btnGroupAddon {
+    background-color: rgb(255,255,255);
+    border-style: none;
+}
+
+.form-control {
+    resize: none;
+}
+
+
+.form-control:focus{
+    border-style:none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.form-control::-webkit-input-placeholder { color: rgb(219,216,213); }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: rgb(219,216,213); }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: rgb(219,216,213); }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: rgb(219,216,213); }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: rgb(219,216,213); }  /* Microsoft Edge */

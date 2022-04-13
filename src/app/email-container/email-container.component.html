@@ -1,0 +1,88 @@
+<div *ngIf="email">
+
+
+<div class="row d-flex justify-content-center">
+    <span class="col-10 email-field">
+        To: vic@vicstech.org<br>
+        From: {{email.sender}}
+    </span>
+</div>
+
+<div class="row d-flex justify-content-center">
+    <h3 class="col-8 heading-dune pb-5 pt-4">
+        {{email.subject}}
+    </h3>
+
+
+    <div class="col-2 button-icon-group d-flex align-items-center pt-3 pb-5">
+        <div class="row">
+            <div class="btn-group" role="group" aria-label="Basic example">
+<!-- pass current email to delete method on click -->
+                <button (click)="delete(email)" type="button" class="btn bg-transparent my-buttons">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#cbc7c3" class="icon bi bi-trash-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z" />
+                    </svg>
+                </button>
+                <button type="button" class="btn bg-transparent my-buttons">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#cbc7c3" class="icon bi bi-reply-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M5.921 11.9L1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z" />
+                    </svg>
+                </button>
+                <button type="button" class="btn bg-transparent my-buttons">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#cbc7c3" class="icon bi bi-three-dots"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<div class="row d-flex justify-content-center">
+    <div class="col-10 dune-content">
+        <p>
+        {{email.content}}
+        </p>
+    </div>
+</div>
+
+
+
+
+<!-- Setting height on parent, my-auto on child centers it -->
+<div class="container">
+    <div class="form-row d-flex" style="height:500px">
+        <div class="col-10 my-auto mx-auto">
+            <div class="border border-bottom-0 input-group p-1">
+                <textarea class="form-control border-0" id="formText" aria-label="With textarea"
+                    rows="9"></textarea>
+            </div>
+            <div id="reply-row" class="border border-top-0 p-3 button-attach d-flex justify-content-between">
+                <button style="transform: scale(1.9)" type="button" class="btn bg-transparent my-buttons">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#cbc7c3" class="bi bi-paperclip"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z" />
+                    </svg>
+                </button>
+                <button type="button" class="btn btn-outline-warning my-buttons w-25">
+                   Reply 
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</div>

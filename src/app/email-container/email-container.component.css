@@ -1,0 +1,33 @@
+button.my-buttons {
+    width: 3em;
+}
+
+h3.heading-dune {
+    font-weight: bold;
+}
+
+div.dune-content {
+    font-size: calc(12px + 0.25vw);
+}
+
+.icon:hover {
+    fill:black;
+}
+
+.form-control {
+    resize: none;
+}
+
+
+.form-control:focus{
+    border-style:none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.form-control::-webkit-input-placeholder { color: rgb(219,216,213); }  /* WebKit, Blink, Edge */
+.form-control:-moz-placeholder { color: rgb(219,216,213); }  /* Mozilla Firefox 4 to 18 */
+.form-control::-moz-placeholder { color: rgb(219,216,213); }  /* Mozilla Firefox 19+ */
+.form-control:-ms-input-placeholder { color: rgb(219,216,213); }  /* Internet Explorer 10-11 */
+.form-control::-ms-input-placeholder { color: rgb(219,216,213); }  /* Microsoft Edge */

@@ -1,0 +1,73 @@
+<body>
+    <!-- On large screen, use 2:4:6 -->
+    <!-- On medium screens, use 2:5:5 -->
+    <!-- TODO: sm, xs -->
+    <div class="container-fluid d-flex vh-100">
+        <!-- Make row's container take up entire viewport height -->
+        <div class="row">
+            <div class="col-md-2 col-lg-2 p-4">
+                <div class="row">
+                    <div class="col my-col">
+                        <!-- SVG takes 3 width of space, Text gets 9 width of space -->
+                        <img class="svg col-3" src="assets/icon.svg" alt="Bootstrap" width="32" height="32">
+                        <span class="my-col-text col-9">Welcome, Vic!</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col pt-4 pb-2 text-center">
+                        <button type="button" class="btn btn-lg btn-primary col-10">COMPOSE</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="sidenav" class="col pr-4 pt-5">
+                        <a id="boldInbox" href="#">Inbox (1)</a><br>
+                        <a href="#">Tagged</a><br>
+                        <a href="#">Important</a><br>
+                        <a href="#">Sent Mail</a><br>
+                        <a href="#">Drafts</a><br>
+                        <a href="#">Trash</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-4 p-3">
+                <div class="row">
+                    <div class="col">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text border border-white" id="btnGroupAddon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                        class="bi bi-search" viewBox="-8 -8 32 32">
+                                        <path stroke="grey" stroke-width="2"
+                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <input class="form-control py-2 border-right-0 border border-white" type="search"
+                                placeholder="Search for emails">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="emails">
+                  <div *ngFor="let email of localEmails" class="row d-flex justify-content-center pt-4 mx-1 my-2">
+                      <div class="card col-4" (click)="onSelect(email)" >
+                          <div class="row card-body">
+                              <h5 class="card-title col-8">{{email.subject}}</h5>
+                              <span class="date-time col-4 d-flex justify-content-end">{{email.datetime}}</span>
+                              <p class="card-text">{{email.short_content}}</p>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-5 col-lg-6 p-5">
+              <!--   bind selectedEmail from parent to email in child    -->
+              <!--  bind removeClick event from app-email-container, allowing us to pass up the $event to app-component -->
+              <app-email-container (removeClick)="onRemoveClick($event)" [email]="selectedEmail"></app-email-container>
+            </div>
+        </div>
+    </div>
+</body>
